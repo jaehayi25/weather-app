@@ -1,8 +1,9 @@
 const img = document.querySelector('img');
-fetch('https://api.giphy.com/v1/gifs/translate?api_key=YOUR_KEY_HERE&s=cats', {mode: 'cors'})
+fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/london?key=K2A3SAV8EL5GKDWHDYFYVBLR5', {mode: 'cors'})
     .then(function(response) {
-        return response.json();
+        //console.log(response.json()); 
+        return response.json(); 
     })
     .then(function(response) {
-        img.src = response.data.images.original.url;
-    });
+        console.log(response); 
+    }); 
