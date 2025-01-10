@@ -8,9 +8,16 @@ function getData(location) {
     })
     .then(function(response) {
         console.log(response); 
+        processData(response); 
     }); 
 }
 
 function processData(jsonData) {
     // returns object with only required data (Fahrenheit, Celcius, weather conditions - current and trends)
+    console.log(jsonData.currentConditions); 
+    console.log(jsonData.currentConditions.temp); 
+    console.log(jsonData.currentConditions.conditions); 
+    console.log(jsonData.description); 
 }
+
+getData("london")
