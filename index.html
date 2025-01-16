@@ -7,10 +7,22 @@
     </head>
 
     <body>
-        <img src="#">
-        <form action="example.com/path" method="post">
-            <input type="text">
-        </form>
+        <div class="container">
+            <form id="weatherForm">
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input 
+                        type="text" 
+                        id="location" 
+                        name="location" 
+                        placeholder="Enter city name or zip code"
+                        required
+                    >
+                </div>
+                <button type="submit">Get Weather</button>
+            </form>
+            <div id="result"></div>
+        </div>
         <script src="javascript.js"></script>
     </body>
 </html>
