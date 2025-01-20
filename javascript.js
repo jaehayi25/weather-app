@@ -1,7 +1,7 @@
 const img = document.querySelector('img');
 
 function getData(location) {
-    fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/london?key=K2A3SAV8EL5GKDWHDYFYVBLR5', {mode: 'cors'})
+    fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=K2A3SAV8EL5GKDWHDYFYVBLR5`, {mode: 'cors'})
     .then(function(response) {
         //console.log(response.json()); 
         return response.json(); 
@@ -29,6 +29,7 @@ document.getElementById('weatherForm').addEventListener('submit', function(e) {
     const location = document.getElementById('location').value;
     
     console.log('Fetching weather for location:', location);
+    getData(location); 
     
     const resultDiv = document.getElementById('result');
     resultDiv.style.display = 'block';
