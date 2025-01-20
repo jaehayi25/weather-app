@@ -20,4 +20,19 @@ function processData(jsonData) {
     console.log(jsonData.description); 
 }
 
-getData("london")
+// getData("london")
+
+
+document.getElementById('weatherForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const location = document.getElementById('location').value;
+    
+    console.log('Fetching weather for location:', location);
+    
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'block';
+    resultDiv.textContent = `Fetching weather data for ${location}...`;
+    
+    document.getElementById('location').value = '';
+});
