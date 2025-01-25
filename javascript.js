@@ -33,7 +33,7 @@ document.getElementById('weatherForm').addEventListener('submit', function(e) {
     
     const resultDiv = document.getElementById('result');
     resultDiv.style.display = 'block';
-    resultDiv.textContent = `Fetching weather data for ${location}...`;
+    // resultDiv.textContent = `Fetching weather data for ${location}...`;
     
     document.getElementById('location').value = '';
 });
